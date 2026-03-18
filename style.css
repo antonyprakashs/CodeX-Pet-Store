@@ -1,6 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+
 /* Antony */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 5px 30px;
 
+}
 
+.nav-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+}
+
+.nav-links {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 0px 10px;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    gap: 20px;
+}
+
+.nav-links ul a {
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    margin: 0;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 5px 30px;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.hero-left {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 5px 50px;
+    max-width: 50%;
+    gap: 20px;
+}
+
+.hero-left-h1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-left h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.hero-left p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.hero-left button {
+    background-color: #FBA125;
+    color: #000;
+    border: none;
+    padding: 10px 10px;
+    margin: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 /* Mohith */
