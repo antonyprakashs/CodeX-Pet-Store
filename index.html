@@ -13,49 +13,63 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- JS -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="./Favicon/paw.png">
 
 </head>
-<!-- ANTONY -->
-<!-- NAV BAR -->
-<section class="nav">
-    <div class="nav-logo">
-        <img src="./Favicon/paw.png" alt="" class="nav-logo" width="60px" height="60px">
-        <h1 class="nav-head">Tail Spin</h1>
-    </div>
-    <div class="nav-links">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Grooming</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-    <div class="nav-svg">
-        <img src="svg/search-svgrepo-com.svg" alt="Search" width="24" height="24">
-        <img src="svg/user-circle-svgrepo-com.svg" alt="User" width="24" height="24">
-    </div>
-</section>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-left">
-        <div class="hero-left-h1">
-            <h1>Grab your</h1>
-            <h1>Every Pet</h1>
-            <h1>Needs</h1>
-        </div>
-        <p>Tail Spin is a pet store that sells pet food, pet toys, and pet accessories.</p>
-        <button>Shop Now</button>
-    </div>
-    <div class="hero-img">
-        <img src="./images/hero-banner.png" alt="Hero" width="100%" height="100%">
-    </div>
-</section>
 
 <body>
+    <!-- ANTONY -->
+    <!-- NAV BAR -->
+    <section class="nav">
+        <div class="nav-logo">
+            <img src="./Favicon/paw.png" alt="" width="60px" height="60px">
+            <h1>Tail Spin</h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Grooming</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-svg">
+            <div class="search-container">
+                <input type="text" id="search-box" placeholder="Search pets, food...">
+                <img src="svg/search-svgrepo-com.svg" id="search-btn" alt="Search" width="24" height="24">
+            </div> 
+            <div class="dropdown-wrapper">
+                <img src="svg/user-circle-svgrepo-com.svg" alt="User" width="24" height="24" id="menuicon">
+                <div id="user-dropdown" class="user-dropdown">
+                    <div class="dropdown-header">Your Account</div>
+                    <ul class="dropdown-links">
+                        <li><a href="#"><span><img src="https://img.icons8.com/?size=100&id=15263&format=png&color=000000" alt="" width="24" height="24"></span> My Profile</a></li>
+                        <li><a href="#"><span><img src="https://img.icons8.com/?size=100&id=22148&format=png&color=000000" alt=""  width="24" height="24"></span> Orders</a></li>
+                        <li><a href="#"><span><img src="https://img.icons8.com/?size=100&id=23822&format=png&color=000000" alt="" width="24" height="24"></span> Wishlist</a></li>
+                        <li><a href="#"><span><img src="https://img.icons8.com/?size=100&id=22112&format=png&color=000000" alt="" width="24" height="24"></span> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-left-h1">
+                <h1>Grab your</h1>
+                <h1>Every Pet</h1>
+                <h1>Needs</h1>
+            </div>
+            <p>Tail Spin is a pet store that sells pet food, pet toys, and pet accessories.</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="hero-img">
+            <img src="./images/hero-banner.png" alt="Hero" width="100%" height="100%">
+        </div>
+    </section>
 
 </body>
 
