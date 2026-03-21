@@ -334,13 +334,12 @@ body {
 }
 
 
-
 /* =========================== MOHITH =========================== */
 /*--best sellers--*/
-
 .best-sellers {
     padding: 60px;
     background-color: #f9f9f9;
+    margin-bottom: 40px;
 }
 
 .best-sellers h2 {
@@ -352,24 +351,30 @@ body {
 .best-seller-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 20px;
+    align-items: start;
 }
 
 .best-card {
     background: white;
     border-radius: 16px;
     padding: 16px;
-    width: 100%;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 470px;
 }
 
 .best-card img {
     width: 100%;
-    height: 260px;
+    height: 240px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 12px;
+    display: block;
 }
 
 .best-card h3 {
@@ -383,6 +388,7 @@ body {
     color: black;
     margin-bottom: 10px;
     line-height: 1.4;
+    min-height: 45px;
 }
 
 .best-card .price {
@@ -404,31 +410,98 @@ body {
     border-radius: 8px;
     cursor: pointer;
     font-size: 15px;
+    margin-top: auto;
 }
 
 .best-card button:hover {
     background: #e69500;
 }
 
+
 /*--special offer--*/
+/* SECTION */
 .special-offer {
-    padding: 60px;
-    background-color: #f9f9f9;
+    width: 100%;
+    padding: 60px 0;  
+    background: #f9f9f9;
 }
 
+/* TITLE */
 .special-offer h2 {
-    font-size: 40px;
+    font-size: 44px;   
+    margin-left: 60px;
     margin-bottom: 30px;
     color: #1e1e4b;
 }
 
-.offer-banner img {
+/* CONTAINER */
+.offer-container {
     width: 100%;
-    height: auto;
-    object-fit:cover;
-    border-radius: 20px;
-    image-rendering:crisp-edges;
+    height: 13cm;   
+    position: relative;
+    overflow: hidden;
+}
+
+/* FULL IMAGE */
+.offer-img {
+    width: 100%;
+    height: 13cm;
+    object-fit: cover; 
+    object-position:center 30%; 
     display: block;
+    background-color: #fff3e0; 
+}
+
+/* TEXT CENTER */
+.offer-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+/* TEXT STYLE */
+.offer-left h3 {
+    color: orange;
+    font-size: 20px; 
+    margin-bottom: 10px;
+}
+
+.offer-left h1 {
+    font-size: 60px;  
+    color: #1e1e4b;
+}
+
+.offer-left p {
+    font-size: 24px; 
+    margin: 10px 0;
+}
+
+.offer-left small {
+    display: block;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+/* BUTTON */
+.offer-left button {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 16px 28px;  
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+/* HOVER EFFECT */
+.offer-left button:hover {
+    background: white;
+    color: orange;
+    border: 2px solid orange;
 }
 
 
