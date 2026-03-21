@@ -72,6 +72,8 @@ document.querySelector(".tab-e").addEventListener("click", function () {
     document.querySelector(".pets ").scrollIntoView({
         behavior: "smooth"
     });
-});
+}
+);
+
 
 /* Viji */
