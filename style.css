@@ -333,6 +333,82 @@ body {
   letter-spacing: 0.05em;
 }
 
+/* Review */
+.review {
+    padding: 60px;
+    background-color: #f9f9f9;
+}
+
+.review h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #1e1e4b;
+}
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.review-card img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.review-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #1e1e4b;
+}
+
+.review-card .desc {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.review-card .price {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 14px;
+}
+
+.review-card .price span {
+    color: orange;
+    font-weight: bold;
+}
+
+.review-card button {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.review-card button:hover {
+    background: darkorange;
+}
+
 
 
 /* =========================== MOHITH =========================== */
