@@ -39,8 +39,39 @@ document.addEventListener("click", function(event) {
 
 
 /* Rithu */
+// Dog button
+document.querySelector(".tab-a").addEventListener("click", function () {
+    document.querySelector(".dog").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 
+// Cat button
+document.querySelector(".tab-b").addEventListener("click", function () {
+    document.querySelector(".cat").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 
+// Bird button
+document.querySelector(".tab-c").addEventListener("click", function () {
+    document.querySelector(".birds").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 
+// Aquarium  button
+document.querySelector(".tab-d").addEventListener("click", function () {
+    document.querySelector(".aquarium ").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+// Aquarium  button
+document.querySelector(".tab-e").addEventListener("click", function () {
+    document.querySelector(".pets ").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 
 /* Viji */
