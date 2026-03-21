@@ -249,7 +249,7 @@ body {
 .hero-img img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* FOOTER */
@@ -414,7 +414,7 @@ body {
 /*--best sellers--*/
 .best-sellers {
     padding: 60px;
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     margin-bottom: 40px;
 }
 
@@ -447,7 +447,7 @@ body {
 .best-card img {
     width: 100%;
     height: 240px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 12px;
     margin-bottom: 12px;
     display: block;
@@ -499,7 +499,7 @@ body {
 .special-offer {
     width: 100%;
     padding: 60px 0;  
-    background: #ffffff;
+    background: #f9f9f9;
 }
 
 /* TITLE */
@@ -520,14 +520,12 @@ body {
 
 /* FULL IMAGE */
 .offer-img {
-    margin-left: 60px;
-    margin-right: 60px;
-    width: 92%;
+    width: 100%;
     height: 13cm;
-    object-fit: contain; 
+    object-fit: cover; 
     object-position:center 30%; 
     display: block;
-    background-color: #ffffff; 
+    background-color: #fff3e0; 
 }
 
 /* TEXT CENTER */
@@ -581,7 +579,6 @@ body {
     color: orange;
     border: 2px solid orange;
 }
-
 
 /* =========================== IMMAN =========================== */
 
