@@ -19,6 +19,9 @@ let menuicon = document.getElementById("menuicon");
 menuicon.addEventListener("click", function(event) {
     event.stopPropagation();
     userDropdown.classList.toggle("active");
+    
+    const navDropdown = document.getElementById("nav-dropdown");
+    if (navDropdown) navDropdown.classList.remove("active");
 });
 
 document.addEventListener("click", function(event) {
@@ -26,6 +29,25 @@ document.addEventListener("click", function(event) {
         userDropdown.classList.remove("active");
     }
 });
+
+// Three-dot nav menu (mobile)
+const navMenuIcon = document.getElementById("navMenuIcon");
+const navDropdown = document.getElementById("nav-dropdown");
+
+if (navMenuIcon && navDropdown) {
+    navMenuIcon.addEventListener("click", function(event) {
+        event.stopPropagation();
+        navDropdown.classList.toggle("active");
+        
+        userDropdown.classList.remove("active");
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!navDropdown.contains(event.target) && event.target !== navMenuIcon) {
+            navDropdown.classList.remove("active");
+        }
+    });
+}
 
 
 
