@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -18,7 +19,12 @@ body {
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
-    margin: 5px 30px;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .nav-logo {
     display: flex;
@@ -40,7 +46,6 @@ body {
     gap: 25px;
     font-size: 16px;
     font-weight: 450;
-    margin-right: 250px;
 }
 .nav-links ul a {
     color: #000;
@@ -86,6 +91,7 @@ body {
 .dropdown-wrapper {
     position: relative;
     display: inline-block;
+    margin-right: 20px;
 }
 #menuicon {
     cursor: pointer;
@@ -93,7 +99,7 @@ body {
 .user-dropdown {
     position: absolute;
     top: calc(100% + 15px);
-    right: -10px;
+    right: 0;
     width: 280px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -150,6 +156,34 @@ body {
 .dropdown-links li a span {
     margin-right: 15px;
     font-size: 18px;
+}
+/* --- Three-dot nav menu button (hidden on desktop) --- */
+.three-dot-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+}
+.three-dot-btn span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 50%;
+}
+.nav-menu-wrapper {
+    display: none;
+}
+.nav-dropdown {
+    right: 0 !important;
 }
 /* --- Hero Section --- */
 .hero {
@@ -351,6 +385,84 @@ body {
 .review-card button:hover {
     background: darkorange;
 }
+/* Contact */
+.Contact{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 60px;
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+}
+.contact-left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 50%;
+}
+.contact-left p{
+    margin-top: 20px;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-form input{
+    width: 45%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.contact-form textarea{
+    width: 45%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.contact-form button{
+    background-color: #FBA125;
+    color: #000;
+    border: none;
+    padding: 10px 10px;
+    margin: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.contact-right{
+    display: inline;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    margin-top: px;
+}
+.contact-right p{
+    margin-top: 20px;
+}
+.contact-right p img{
+    margin-right: 10px;
+}
 /* =========================== MOHITH =========================== */
 /*--best sellers--*/
 .best-sellers {
@@ -502,6 +614,7 @@ body {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 body {
@@ -518,7 +631,6 @@ body {
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
-    margin: 5px 30px;
 }
 .nav-logo {
     display: flex;
@@ -1123,40 +1235,13 @@ body {
 
 
 /* =========================== RESPONSIVE DESIGN =========================== */
-/* --- Three-dot nav menu button (hidden on desktop) --- */
-.three-dot-btn {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px 6px;
-    border-radius: 6px;
-    width: 32px;
-    height: 32px;
-}
-.three-dot-btn span {
-    display: block;
-    width: 5px;
-    height: 5px;
-    background-color: #333;
-    border-radius: 50%;
-}
-.nav-menu-wrapper {
-    display: none;
-}
-.nav-dropdown {
-    right: 0 !important;
-}
+
 /* ---- Mobile (max 768px) ---- */
 @media (max-width: 768px) {
 
     /* NAVBAR */
     .nav {
-        margin: 5px 15px;
+        margin: 0;
     }
     .nav-links {
         display: none;
@@ -1183,6 +1268,9 @@ body {
     }
     .three-dot-btn {
         display: flex;
+    }
+    .dropdown-wrapper{
+        margin-right: 0;
     }
     /* HERO (index) */
     .hero {
@@ -1387,7 +1475,7 @@ body {
 @media (max-width: 480px) {
 
     .nav {
-        margin: 4px 10px;
+        margin: 0;
     }
     .nav-logo h1 {
         font-size: 17px;
