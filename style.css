@@ -396,17 +396,12 @@ body {
 }
 .contact-left{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
     width: 50%;
 }
 .contact-left p{
     margin-top: 20px;
-}
-.contact-left{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 .contact-form input{
     width: 45%;
@@ -451,11 +446,10 @@ body {
     text-align: center;
 }
 .contact-right{
-    display: inline;
+    display: flex;
     flex-direction: column;
     gap: 20px;
     width: 50%;
-    margin-top: px;
 }
 .contact-right p{
     margin-top: 20px;
@@ -1230,10 +1224,6 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 
 }
-/* =========================== VIJI =========================== */
-
-
-
 /* =========================== RESPONSIVE DESIGN =========================== */
 
 /* ---- Mobile (max 768px) ---- */
@@ -1365,6 +1355,18 @@ body {
     .review-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+    }
+    /* CONTACT */
+    .Contact {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 40px;
+    }
+    .contact-left, .contact-right {
+        width: 100%;
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
     }
     /* GROOMING HERO */
     .hero-1 {
