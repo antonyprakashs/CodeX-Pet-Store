@@ -625,6 +625,12 @@ body {
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .nav-logo {
     display: flex;
