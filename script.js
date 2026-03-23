@@ -55,29 +55,33 @@ const nameInput = document.getElementById('name');
 
 // 2. Real-time typing feedback (Optional)
 // This fires every time a key is pressed in the Name field
-nameInput.addEventListener('input', (e) => {
-    console.log("User is typing name:", e.target.value);
-    // You could use this to show a "live" character count or validation
-});
+if (nameInput) {
+  nameInput.addEventListener('input', (e) => {
+      console.log("User is typing name:", e.target.value);
+      // You could use this to show a "live" character count or validation
+  });
+}
 
 // 3. Handle Form Submission
-contactForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents the page from refreshing
+if (contactForm) {
+  contactForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents the page from refreshing
 
-    // Gather all data into an object
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
+      // Gather all data into an object
+      const formData = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value
+      };
 
-    console.log("Form Submitted Successfully:", formData);
-    alert(`Thanks ${formData.name}! Your message has been "sent".`);
-    
-    // Optional: Clear the form after submission
-    contactForm.reset();
-});
+      console.log("Form Submitted Successfully:", formData);
+      alert(`Thanks ${formData.name}! Your message has been "sent".`);
+      
+      // Optional: Clear the form after submission
+      contactForm.reset();
+  });
+}
 
 
 
@@ -187,24 +191,31 @@ const servicesData = {
 
 document.querySelectorAll(".card button").forEach(btn => {
   btn.addEventListener("click", function () {
-    const title = this.parentElement.querySelector("h3").innerText;
+    const titleObj = this.parentElement.querySelector("h3");
+    if (!titleObj) return;
+    const title = titleObj.innerText.trim();
     const data = servicesData[title];
 
-    document.getElementById("panelTitle").innerText = title;
-    document.getElementById("panelDesc").innerText = data.desc;
-    document.getElementById("panelPrice").innerText = data.price;
-    document.getElementById("panelImg").src = data.img;
+    if (data) {
+      document.getElementById("panelTitle").innerText = title;
+      document.getElementById("panelDesc").innerText = data.desc;
+      document.getElementById("panelPrice").innerText = data.price;
+      document.getElementById("panelImg").src = data.img;
 
-    // Add detailed list
-    const list = document.getElementById("panelDetails");
-    list.innerHTML = "";
-    data.details.forEach(item => {
-      const li = document.createElement("li");
-      li.innerText = item;
-      list.appendChild(li);
-    });
+      // Add detailed list
+      const list = document.getElementById("panelDetails");
+      list.innerHTML = "";
+      data.details.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        list.appendChild(li);
+      });
 
-    document.getElementById("servicePanel").classList.add("active");
+      document.getElementById("servicePanel").classList.add("active");
+    } else {
+      // Logic for product cards (e.g., adding to cart)
+      alert("Added " + title + " to cart!");
+    }
   });
 });
 
@@ -244,43 +255,46 @@ if (form) {
 
 /* Rithu */
 // Dog button
-document.querySelector(".tab-a").addEventListener("click", function () {
-    document.querySelector(".dog").scrollIntoView({
-        behavior: "smooth"
-    });
-});
-
-// Cat button
-document.querySelector(".tab-b").addEventListener("click", function () {
-    document.querySelector(".cat").scrollIntoView({
-        behavior: "smooth"
-    });
-});
-
-// Bird button
-document.querySelector(".tab-c").addEventListener("click", function () {
-    document.querySelector(".birds").scrollIntoView({
-        behavior: "smooth"
-    });
-});
-
-// Aquarium  button
-document.querySelector(".tab-d").addEventListener("click", function () {
-    document.querySelector(".aquarium ").scrollIntoView({
-        behavior: "smooth"
-    });
-});
-
-// Aquarium  button
-document.querySelector(".tab-e").addEventListener("click", function () {
-    document.querySelector(".pets ").scrollIntoView({
-        behavior: "smooth"
+if (document.querySelector(".tab-a")) {
+    document.querySelector(".tab-a").addEventListener("click", function () {
+        document.querySelector(".dog").scrollIntoView({
+            behavior: "smooth"
+        });
     });
 }
 
-);
+// Cat button
+if (document.querySelector(".tab-b")) {
+    document.querySelector(".tab-b").addEventListener("click", function () {
+        document.querySelector(".cat").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+}
 
+// Bird button
+if (document.querySelector(".tab-c")) {
+    document.querySelector(".tab-c").addEventListener("click", function () {
+        document.querySelector(".birds").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+}
 
+// Aquarium  button
+if (document.querySelector(".tab-d")) {
+    document.querySelector(".tab-d").addEventListener("click", function () {
+        document.querySelector(".aquarium ").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+}
 
-
-/* Viji */
+// Pet Accessories button
+if (document.querySelector(".tab-e")) {
+    document.querySelector(".tab-e").addEventListener("click", function () {
+        document.querySelector(".pets").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+}
