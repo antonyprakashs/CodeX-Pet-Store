@@ -54,20 +54,17 @@ const contactForm = document.getElementById('contactForm');
 const nameInput = document.getElementById('name');
 
 // 2. Real-time typing feedback (Optional)
-// This fires every time a key is pressed in the Name field
 if (nameInput) {
   nameInput.addEventListener('input', (e) => {
       console.log("User is typing name:", e.target.value);
-      // You could use this to show a "live" character count or validation
   });
 }
 
 // 3. Handle Form Submission
 if (contactForm) {
   contactForm.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevents the page from refreshing
+      event.preventDefault();
 
-      // Gather all data into an object
       const formData = {
           name: document.getElementById('name').value,
           email: document.getElementById('email').value,
@@ -77,8 +74,7 @@ if (contactForm) {
 
       console.log("Form Submitted Successfully:", formData);
       alert(`Thanks ${formData.name}! Your message has been "sent".`);
-      
-      // Optional: Clear the form after submission
+
       contactForm.reset();
   });
 }
